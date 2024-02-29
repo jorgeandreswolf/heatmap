@@ -1,0 +1,21 @@
+Prerequisites: see readme.txt
+
+1, Start the Application: Run the Python script. A window titled "Heatmap Generator" will open.
+
+2. Load JSON Data:
+
+Click on the "Load JSON" button.
+Navigate to the location of your JSON file in the dialog that appears. The JSON file should contain data in the following format:
+
+[
+    {"x": value1, "y": value2},
+    ...
+]
+
+Select the file and click "Open". The application will read the data and generate a heatmap based on the 'x' and 'y' coordinates found in the JSON file. The heatmap will be displayed in a new window.
+
+3. Save Heatmap:
+
+After viewing the generated heatmap, click on the "Save Heatmap" button to save the visualization.
+Choose your desired save location and file name in the dialog that appears. Ensure the file extension is .png.
+Click "Save" to export the heatmap image to your chosen location.

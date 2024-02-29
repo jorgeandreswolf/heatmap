@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
 
 def load_json_data():
+    """ Load JSON file """
     file_path = filedialog.askopenfilename(title="Select JSON File", filetypes=[("JSON files", "*.json")])
     if file_path:
         with open(file_path, 'r') as file:
@@ -14,6 +15,7 @@ def load_json_data():
     return None
 
 def generate_heatmap():
+    """ generate heatmap from JSON data """
     data = load_json_data()
     if data:
         x = [coord['x'] for coord in data]
@@ -28,6 +30,7 @@ def generate_heatmap():
         plt.show()
 
 def save_heatmap():
+    """ save heatmap as PNG file """
     file_path = filedialog.asksaveasfilename(defaultextension=".png", filetypes=[("PNG files", "*.png")])
     if file_path:
         plt.savefig(file_path)
